@@ -168,8 +168,9 @@ input:focus::-webkit-input-placeholder {
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
-  function onSubmit(token) {
-    document.getElementById("demo-form").submit();
+  function onSubmit() {
+    alert('阿彌陀佛');
+    grecaptcha.execute();
   }
 </script>
 </head>
@@ -217,7 +218,7 @@ input:focus::-webkit-input-placeholder {
 									</span>
 								</div>
 								<div class="text-center">
-                    <a href="#" class="btn btn-primary btn-link btn-wd btn-lg">點我</a>
+                    <a href="#" class="btn btn-primary btn-link btn-wd btn-lg" onclick="onSubmit()">點我</a>
                 </div>
                 <div id='recaptcha' class="g-recaptcha"
                 data-sitekey="6LdbvIIUAAAAAJHF-aZ6zyF13kfvGL90reKs90R9"
