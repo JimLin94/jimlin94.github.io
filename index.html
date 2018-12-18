@@ -170,7 +170,11 @@ input:focus::-webkit-input-placeholder {
 <script>
   function onSubmit() {
     alert('阿彌陀佛');
-    grecaptcha.execute();
+    grecaptcha.execute().then(function (res) {
+      console.log('Good to go', res);
+    }, function (err) {
+      console.log('Something went wrong', err)
+    });
   }
 </script>
 </head>
@@ -186,6 +190,7 @@ input:focus::-webkit-input-placeholder {
 							<div class="card-body">
 								<form id="demo-form">
 									<div class="glowBox">
+
 										<h4 class="title">註冊吧</h4>
 										<div class="socialMedia">
 											<a href="#" class="btn btn-just-icon btn-link">
